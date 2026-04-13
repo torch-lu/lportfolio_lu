@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale-=1.0">
+    <title>灰色系游戏展厅</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- 左侧导航栏 -->
+<nav class="sidebar">
+    <div class="nav-item">
+        <i class="fa-solid fa-bars nav-icon"></i>
+        <div class="dropdown-menu">
+            <a href="javascript:void(0)" class="menu-home">返回主页</a>
+            <a href="javascript:void(0)" class="menu-about">关于我</a>
+            <a href="javascript:void(0)" class="menu-donate">赞助</a>
+        </div>
+    </div>
+</nav>
+
+<!-- 主内容 -->
+<main class="main-content">
+    <!-- 轮播图 -->
+    <section class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide active"><img src="/src/resources/images/lunbo4.png"></div>
+            <div class="carousel-slide"><img src="/src/resources/images/lunbo1.png"></div>
+            <div class="carousel-slide"><img src="/src/resources/images/lunbo2.png"></div>
+            <div class="carousel-slide"><img src="/src/resources/images/lunbo3.png"></div>
+        </div>
+        <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </section>
+
+    <!-- 游戏容器：主页显示列表，玩游戏时显示内嵌画面 -->
+    <div id="game-container">
+        <!-- 游戏列表 -->
+        <section class="game-list" id="game-list">
+            <div class="game-card" data-game="games/game1/index.html">
+                <img src="/src/resources/images/lianliankanfm.png" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">连连看</h3>
+                    <p class="game-desc">经典连连看游戏，点击两个相同的图标即可消除，快来挑战最快通关吧!</p>
+                </div>
+            </div>
+            <div class="game-card" data-game="games/game2/index.html">
+                <img src="/src/resources/images/idiomGame.png" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">猜成语</h3>
+                    <p class="game-desc">经典猜成语小游戏，点击开始游戏来猜成语吧！</p>
+                </div>
+            </div>
+            <div class="game-card" data-game="game3.html">
+                <img src="https://picsum.photos/id/113/600/350" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">暂未开发</h3>
+                    <p class="game-desc">这是一个暂未开发的游戏的占位格子</p>
+                </div>
+            </div>
+            <div class="game-card" data-game="game4.html">
+                <img src="https://picsum.photos/id/114/600/350" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">暂未开发</h3>
+                    <p class="game-desc">这是一个暂未开发的游戏的占位格子</p>
+                </div>
+            </div>
+            <div class="game-card" data-game="game5.html">
+                <img src="https://picsum.photos/id/115/600/350" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">暂未开发</h3>
+                    <p class="game-desc">这是一个暂未开发的游戏的占位格子</p>
+                </div>
+            </div>
+            <div class="game-card" data-game="game6.html">
+                <img src="https://picsum.photos/id/116/600/350" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">暂未开发</h3>
+                    <p class="game-desc">这是一个暂未开发的游戏的占位格子</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏内嵌iframe -->
+        <iframe id="game-iframe" src=""></iframe>
+    </div>
+</main>
+
+<!-- 右侧占位 -->
+<div class="right-placeholder"></div>
+
+<!-- 抽屉遮罩 + 面板 -->
+<div class="drawer-overlay"></div>
+<div class="drawer about-drawer">
+    <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    <h2 class="drawer-title">关于我</h2>
+    <div class="about-content">
+        <div class="info-item"><span class="label">身份：</span><span class="text">独立游戏开发者</span></div>
+        <div class="info-item"><span class="label">擅长：</span><span class="text">网页开发、游戏制作</span></div>
+        <div class="info-item"><span class="label">理念：</span><span class="text">极简风格，极致体验</span></div>
+        <div class="info-item"><span class="label">邮箱：</span><span class="text">1738507908@qq.com</span></div>
+        <div class="info-item"><span class="label">电话：</span><span class="text">欢迎致电18679405224</span></div>
+    </div>
+</div>
+
+<div class="drawer donate-drawer">
+    <button class="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    <h2 class="drawer-title">赞助</h2>
+    <div class="donate-content">
+        <p class="donate-text">🥺 创作不易，持续更新需要动力呀！</p>
+        <p class="donate-text">喜欢我的作品，随意打赏鼓励一下叭～</p>
+        <div class="qrcode-box">
+            <img src="/src/resources/images/money.png" class="qrcode">
+            <p>扫码投喂 → 任意金额都超感谢！</p>
+        </div>
+    </div>
+</div>
+
+<script src="src/app.js"></script>
+</body>
+</html>
